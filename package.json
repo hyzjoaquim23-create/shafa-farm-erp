@@ -1,0 +1,18 @@
+{
+  "name": "shafa-farm-erp",
+  "version": "1.0.0",
+  "description": "Shafa Farm ERP System",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client\"",
+    "server:dev": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "kill-ports": "taskkill /F /IM node.exe"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  }
+}

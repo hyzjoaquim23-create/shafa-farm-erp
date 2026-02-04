@@ -1,0 +1,427 @@
+.activity-log-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.activity-log-header {
+  margin-bottom: 30px;
+}
+
+.activity-log-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.activity-log-header .subtitle {
+  color: #7f8c8d;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.error-alert {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  color: #c33;
+  font-size: 0.95rem;
+}
+
+/* Statistics Section */
+.activity-stats-section {
+  margin-bottom: 30px;
+}
+
+.activity-stats-section h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Filter Section */
+.filters-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #ecf0f1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 6px;
+}
+
+.filter-input,
+.filter-select {
+  padding: 10px 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-reset,
+.btn-export {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-reset {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-reset:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+.btn-export {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-export:hover {
+  background-color: #229954;
+  transform: translateY(-2px);
+}
+
+/* Activity Log Table */
+.activity-log-table-container {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ecf0f1;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.activity-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.activity-log-table thead {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.activity-log-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.activity-log-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.activity-log-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.activity-log-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.log-row:last-child td {
+  border-bottom: none;
+}
+
+.log-id {
+  color: #7f8c8d;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.log-timestamp {
+  color: #34495e;
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.log-user {
+  min-width: 150px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info strong {
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.user-info small {
+  color: #95a5a6;
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+.log-action,
+.log-entity {
+  min-width: 100px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-create {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.badge-update {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.badge-delete {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.badge-user {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.badge-goat {
+  background-color: #e7d4f5;
+  color: #6c3483;
+}
+
+.badge-default {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
+
+.log-entity-id {
+  color: #7f8c8d;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.log-description {
+  color: #34495e;
+  font-size: 0.9rem;
+  max-width: 300px;
+  word-break: break-word;
+}
+
+.no-logs {
+  padding: 40px 20px;
+  text-align: center;
+  color: #7f8c8d;
+}
+
+.no-logs p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-pagination {
+  padding: 10px 20px;
+  border: 1px solid #bdc3c7;
+  background-color: white;
+  color: #2c3e50;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-pagination:hover:not(:disabled) {
+  background-color: #667eea;
+  border-color: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-pagination:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: #2c3e50;
+  font-weight: 500;
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Loading State */
+.activity-log-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .activity-log-container {
+    padding: 20px 15px;
+  }
+
+  .activity-log-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .filter-row {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-buttons {
+    grid-column: 1 / -1;
+  }
+
+  .activity-log-table {
+    font-size: 0.85rem;
+  }
+
+  .activity-log-table th,
+  .activity-log-table td {
+    padding: 10px 8px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .log-description {
+    max-width: 150px;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-log-container {
+    padding: 15px 10px;
+  }
+
+  .activity-log-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .activity-log-table {
+    font-size: 0.8rem;
+  }
+
+  .activity-log-table th,
+  .activity-log-table td {
+    padding: 8px 5px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badge {
+    padding: 3px 8px;
+    font-size: 0.65rem;
+  }
+
+  .log-description {
+    display: none;
+  }
+}

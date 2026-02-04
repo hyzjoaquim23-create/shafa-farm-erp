@@ -1,0 +1,28 @@
+/* Reuse GoatManagement styles where possible */
+.chicken-management { padding: 20px; }
+.goat-mgmt-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+.goat-mgmt-header h1 { color: #d35400; margin:0; }
+.search-section { margin-bottom: 20px; }
+.search-input { width:100%; max-width:400px; padding:10px; border:1px solid #ddd; border-radius:6px }
+.goats-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.goat-card { background:white; border-radius:10px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); overflow:hidden; display:flex; flex-direction:column; }
+.goat-card-header { background: linear-gradient(135deg,#d35400,#e67e22); padding:10px; display:flex; justify-content:space-between; align-items:center }
+.goat-name { color:white; font-weight:700 }
+.goat-tag { color:rgba(255,255,255,0.9); font-size:12px }
+.goat-card-body { padding:10px; flex:1 }
+.info-row { display:flex; justify-content:space-between; padding:4px 0 }
+.badges-row { margin-top:8px }
+.btn-icon { background:none; border:1px solid #ddd; padding:6px; border-radius:6px; cursor:pointer }
+.btn-edit { color:#3498db; border-color:#3498db }
+.btn-delete { color:#e74c3c; border-color:#e74c3c }
+.modal-overlay { position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); display:flex; justify-content:center; align-items:center; z-index:1000 }
+.modal-content { background:white; width:90%; max-width:640px; border-radius:8px; overflow:auto }
+.modal-header { display:flex; justify-content:space-between; align-items:center; padding:16px; border-bottom:1px solid #eee }
+.goat-form { padding:16px }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px }
+.form-group label { margin-bottom:6px; font-weight:600 }
+.form-group input, .form-group select, .form-group textarea { padding:8px; border:1px solid #ddd; border-radius:6px }
+.form-actions { display:flex; gap:8px; justify-content:flex-end; padding:12px; border-top:1px solid #eee }
+.error-alert { background:#f8d7da; color:#721c24; padding:12px; border-radius:6px }
+.success-alert { background:#d4edda; color:#155724; padding:12px; border-radius:6px }
+.no-goats { grid-column:1/-1; background:white; padding:40px; border-radius:8px; text-align:center }

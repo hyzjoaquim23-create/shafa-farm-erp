@@ -1,0 +1,25 @@
+/* Basic styles for Plant Management reusing Goat styles */
+.plant-management { padding:20px }
+.goat-mgmt-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px }
+.goat-mgmt-header h1 { color:#16a085; margin:0 }
+.search-section { margin-bottom:16px }
+.search-input { width:100%; max-width:420px; padding:10px; border-radius:6px; border:1px solid #ddd }
+.goats-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:14px }
+.goat-card { background:white; border-radius:10px; box-shadow:0 1px 6px rgba(0,0,0,0.06); display:flex; flex-direction:column }
+.goat-card-header { background: linear-gradient(135deg,#16a085,#1abc9c); padding:10px; display:flex; justify-content:space-between; align-items:center }
+.goat-name { color:white; font-weight:700 }
+.goat-tag { color:rgba(255,255,255,0.9); font-size:12px }
+.goat-card-body { padding:10px }
+.info-row { display:flex; justify-content:space-between; padding:4px 0 }
+.btn-icon { background:none; border:1px solid #ddd; padding:6px; border-radius:6px; cursor:pointer }
+.btn-edit { color:#3498db }
+.btn-delete { color:#e74c3c }
+.modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.5); display:flex; justify-content:center; align-items:center; z-index:1000 }
+.modal-content { background:white; width:90%; max-width:700px; border-radius:8px }
+.modal-header { display:flex; justify-content:space-between; align-items:center; padding:16px; border-bottom:1px solid #eee }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px }
+.form-group input, .form-group select, .form-group textarea { padding:8px; border:1px solid #ddd; border-radius:6px }
+.form-actions { display:flex; gap:8px; justify-content:flex-end; padding:12px; border-top:1px solid #eee }
+.error-alert { background:#f8d7da; color:#721c24; padding:12px; border-radius:6px }
+.success-alert { background:#d4edda; color:#155724; padding:12px; border-radius:6px }
+.no-goats { grid-column:1/-1; padding:40px; text-align:center; border-radius:8px; background:white }
