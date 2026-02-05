@@ -89,6 +89,8 @@
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-header {
@@ -175,8 +177,13 @@
   gap: 10px;
   justify-content: flex-end;
   margin-top: 25px;
-  padding-top: 20px;
+  padding: 20px;
   border-top: 1px solid #eee;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  background: white;
+  flex-shrink: 0;
 }
 
 .confirm-modal {
@@ -2810,6 +2817,8 @@
 
 .status-form {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .status-actions-grid {
