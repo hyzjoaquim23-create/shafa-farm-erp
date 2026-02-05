@@ -176,6 +176,7 @@
   display: flex;
   gap: 10px;
   justify-content: flex-end;
+  align-items: center;
   margin-top: 25px;
   padding: 20px;
   border-top: 1px solid #eee;
@@ -184,6 +185,8 @@
   z-index: 10;
   background: white;
   flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .confirm-modal {
@@ -425,6 +428,8 @@
   font-weight: 600;
   font-size: 14px;
   transition: all 0.3s;
+  white-space: nowrap;
+  min-width: auto;
 }
 
 .btn-primary {
@@ -2941,6 +2946,8 @@
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
   animation: slideUp 0.3s ease-out;
 }
 
