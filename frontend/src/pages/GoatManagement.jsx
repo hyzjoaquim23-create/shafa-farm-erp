@@ -795,18 +795,18 @@ function GoatManagement() {
                         <span className="label">Breeding:</span>
                         <span className={`status-badge breeding-${goat.breeding_status}`}>{goat.breeding_status}</span>
                       </div>
-                      {goat.is_sold && (
+                      {goat.is_sold === 1 && goat.sold_price && parseFloat(goat.sold_price) > 0 ? (
                         <div className="detail-row">
                           <span className="label">Sold Price:</span>
                           <span className="value">K {parseFloat(goat.sold_price).toLocaleString()}</span>
                         </div>
-                      )}
-                      {goat.is_dead && (
+                      ) : null}
+                      {goat.is_dead === 1 && goat.date_of_death && goat.date_of_death !== '0' && goat.date_of_death?.trim() ? (
                         <div className="detail-row">
                           <span className="label">Date of Death:</span>
                           <span className="value">{goat.date_of_death}</span>
                         </div>
-                      )}
+                      ) : null}
                     </div>
                     {!isOwner && (
                       <div className="goat-actions">
